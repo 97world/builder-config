@@ -1,0 +1,30 @@
+{
+    "name": "builder-config",
+    "version": "1.0.0",
+    "description": "builder-config",
+    "main": "index.js",
+    "bin": "bin/builder-config",
+    "directories": {
+        "bin": "./bin"
+    },
+    "scripts": {
+    },
+    "engines": {
+        "node": ">=9.8.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:97world/builder-config.git"
+    },
+    "keywords": [
+        "webpack",
+        "builder",
+        "config"
+    ],
+    "author": "97world",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
