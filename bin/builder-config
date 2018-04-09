@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const shelljs = require('shelljs');
+const slash = require('slash');
+const argv = require('yargs').argv;
+const path = require('path');
+
+const devScriptFilePath = path.join(__dirname, '../script/dev.js');
+const prodScriptFilePath = path.join(__dirname, '../script/prod.js');
+
+if (argv.d) {
+  const devCode = shelljs.exec(`node ${devScriptFilePath}`);
+} else if (argv.p) {
+  const prodCode = shelljs.exec(`node ${prodScriptFilePath}`);
+} else {
+  console.log('Please specify the parameters.');
+}
