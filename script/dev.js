@@ -12,6 +12,14 @@ const envConfig = require('../config/env');
 
 const compiler = webpack(webpackConfig);
 
+compiler.hooks.invalid.tap('bulder-config', (fileName, changeTime) => {
+  console.log('Compiling...');
+});
+
+compiler.hooks.done.tap('bulder-config', stats => {
+  console.log('Compiled successfully\n');
+});
+
 const devServer = new WebpackDevServer(compiler, webpackDevServerConfig);
 
 const port = 3799;
